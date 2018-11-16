@@ -1,0 +1,32 @@
+.burger-menu {
+    position: relative;
+    width: 30px;
+    height: 30px;
+
+    .line {
+        height: 2px;
+        background: #2a374c;
+        margin-bottom: 2px;
+
+        &--top {
+            width: 100%;
+        }
+
+        &--middle {
+            width: 100%;
+            background: transparent;
+        }
+
+        &--small {
+            width: 8px;
+        }
+
+        &--big {
+            width: 19px;
+        }
+
+        &--bottom {
+            width: 18px;
+        }
+    }
+}

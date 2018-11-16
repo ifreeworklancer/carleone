@@ -1,0 +1,54 @@
+#intro {
+    padding: 120px 0;
+    height: auto;
+    background: url('../images/bg/intro-bg.jpg') 50% 50% /cover no-repeat;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        height: 100vh;
+        max-height: 1080px;
+    }
+}
+
+.intro-item {
+    position: relative;
+    padding-right: 20px;
+    padding-bottom: 75px;
+    color: #fff;
+    z-index: 10;
+
+    &__title {
+        position: relative;
+        padding-bottom: 25px;
+        margin-bottom: 10px;
+        line-height: 1.1;
+
+
+        &::before {
+            content: '';
+            @extend %pos;
+            top: auto;
+            width: 60px;
+            height: 4px;
+            background: $primary;
+            transform: skew(-20deg);
+        }
+    }
+
+    &__subtitle {
+        font-size: 20px;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            font-size: 24px;
+        }
+    }
+
+    &::before {
+        content: '';
+        @extend %pos;
+        top: 35px;
+        left: -1500px;
+        right: -20px;
+        background: rgba($dark, .8);
+        z-index: -5;
+    }
+}
