@@ -5,12 +5,13 @@
 
         .label-placeholder {
             bottom: 80%;
-            font-size: 14px;
-            color: #616161;
+            font-size: 13px;
+            color: #a8b7cf;
         }
 
         &::before {
             background: $primary;
+            width: 100%;
         }
     }
 
@@ -41,8 +42,9 @@
         content: '';
         @extend %pos;
         top: auto;
+        width: 15px;
         height: 2px;
-        background: #ccc;
+        background: $light;
         transition: .5s;
     }
 }
@@ -60,7 +62,6 @@
 }
 
 .form-column {
-    padding: 0 30px;
 
     .form-group {
         width: 100%;
