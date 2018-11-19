@@ -68,28 +68,41 @@ $comparison = [
 		[
 			'title' => 'Peugeot 508 BlueHDI 2016',
 			'image' => '../../images/content/comparison/comparison-item-1.jpg',
-			'inUA' => '14 900',
-			'inUSA' => '8 500',
+			'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+			'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+			'priceInUA' => '14 900',
+			'priceInUSA' => '8 500',
 		],
 		[
 			'title' => 'Volkswagen Arteon 2.0TSI AT Motion Elegance 2017',
 			'image' => '../../images/content/comparison/comparison-item-2.jpg',
-			'inUA' => '52 500',
-			'inUSA' => '35 500',
+			'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+			'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+			'priceInUA' => '52 500',
+			'priceInUSA' => '35 500',
 		],
 		[
 			'title' => 'Mitsubishi Outlander 2010',
 			'image' => '../../images/content/comparison/comparison-item-3.jpg',
-			'inUA' => '8 500',
-			'inUSA' => ' 6 300',
+			'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+			'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+			'priceInUA' => '8 500',
+			'priceInUSA' => ' 6 300',
 		],
 		[
 			'title' => 'Ford Mondeo 2.0 2011',
 			'image' => '../../images/content/comparison/comparison-item-4.jpg',
-			'inUA' => '13 900',
-			'inUSA' => '9 200',
+			'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+			'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+			'priceInUA' => '13 900',
+			'priceInUSA' => '9 200',
 		],
 	],
+];
+
+$sale = [
+	'title' => 'Оставьте заявку, мы найдем его для Вас по лучшей цене',
+	'subtitle' => 'Мечтаете об  авто',
 ];
 
 $reviews = [

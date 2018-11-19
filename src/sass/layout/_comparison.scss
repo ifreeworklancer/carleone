@@ -1,0 +1,195 @@
+#comparison {
+    padding: 90px 0;
+    background: #fff;
+    z-index: 3;
+
+    .section-description {
+
+        &::before {
+            content: '';
+            @extend %pos;
+            top: 30px;
+            left: -20px;
+            bottom: -50px;
+            background: $primary;
+            z-index: -5;
+        }
+    }
+}
+
+.comparison-card {
+    position: relative;
+    margin-bottom: 20px;
+    border: 1px solid #d7d7d7;
+
+    &-top {
+        position: relative;
+
+        .img {
+            height: 270px;
+            @extend %img;
+        }
+
+        .title {
+            position: absolute;
+            left: 10px;
+            bottom: 20px;
+            padding: 15px 0;
+            display: inline-block;
+            z-index: 4;
+            transition: .5s;
+
+            &::before {
+                content: '';
+                @extend %pos;
+                left: -20px;
+                right: -50px;
+                background: $primary;
+                transform: skew(-20deg);
+                z-index: -4;
+            }
+        }
+    }
+
+    &-bottom {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #fff;
+        background: $dark;
+        overflow: hidden;
+        z-index: 6;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            flex-direction: row;
+        }
+
+        &-item {
+            padding: 10px 20px;
+            width: 100%;
+            transition: .5s;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+                width: 50%;
+            }
+
+            &--UA {
+                background: #fff;
+
+                .info {
+
+                    &__logo {
+                        width: 70px;
+                    }
+                }
+            }
+
+            &--USA {
+                color: #c3c9d4;
+
+                .info {
+
+                    &__logo {
+                        width: 80px;
+                    }
+                    
+                    &-value {
+
+                        .price {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+
+            .info {
+                display: flex;
+                align-items: center;
+
+                &-value {
+
+                    .price {
+                        margin-left: 8px;
+                        font-weight: bold;
+                    }
+                }
+
+                &__logo {
+                    margin-right: 15px;
+                    height: 20px;
+                    @extend %img;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+
+    &__btn {
+        position: absolute;
+        left: 0;
+        right: -50%;
+        opacity: 0;
+        pointer-events: none;
+        bottom: -5px;
+        padding: 15px 60px;
+        color: $dark;
+        font-size: 24px;
+        z-index: 7;
+        transition: .5s;
+        
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            left: auto;
+        }
+
+        &:hover {
+            color: $dark;
+        }
+
+        &::before {
+            content: '';
+            @extend %pos;
+            background: $primary;
+            transform: skew(-20deg);
+            z-index: -5;
+        }
+
+        &::after {
+            content: '';
+            @extend %pos;
+            left: 20%;
+            right: -5%;
+            background: $primary;
+            z-index: -5;
+        }
+    }
+
+    &:hover {
+
+        .comparison-card-top {
+            
+            .title {
+                bottom: -70px;
+            }
+        }
+
+        .comparison-card-bottom {
+
+            &-item {
+
+                &--UA {
+                    margin-left: -100%;
+
+                    @media (min-width: map_get($grid-breakpoints, sm)) {
+                        margin-left: -50%;
+                    }
+                }
+            }
+        }
+
+        .comparison-card__btn {
+            right: 10px;
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+}

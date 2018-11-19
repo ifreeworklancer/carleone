@@ -1,7 +1,6 @@
 #intro {
-    padding: 120px 0;
+    padding: 120px 0 0;
     height: auto;
-    // background: url('../images/bg/intro-bg.jpg') 50% 50% /cover no-repeat;
 
     @media (min-width: map_get($grid-breakpoints, sm)) {
         height: 100vh;
@@ -26,6 +25,9 @@
 
             &--3 {
                 background: url('../images/content/parallax/intro/intro-parallax-item-3.png') 50% 50% /cover no-repeat;
+            }
+            &--4 {
+                background: url('../images/content/parallax/intro/intro-parallax-item-4.png') 50% 50% /cover no-repeat;
             }
         }
     }
@@ -77,6 +79,7 @@
 
 .intro-order {
     position: relative;
+    padding-bottom: 10px;
 
     &__description {
         font-style: italic;

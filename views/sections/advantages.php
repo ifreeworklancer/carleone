@@ -3,7 +3,9 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-4 col-lg-6">
-                
+                <div class="advantages-logo d-none d-sm-block">
+                    <img src="images/icon/logo/logo-icon-dark.png" alt="">
+                </div>
             </div>
             <div class="col-sm-8 col-lg-6">
                 <?php 
@@ -22,4 +24,14 @@
             </div>
         </div>
     </div>
+    <a href="#pain" class="scroll-down scroll-link">
+        <div class="scroll-down__icon"></div>
+        <div class="scroll-down__text">
+            Хорошее авто за адекватные деньги
+        </div>
+    </a>
 </section>
+
+
+<!-- Car -->
+<div id='decor-car' class="decor-car" style="background-image: url('../../images/content/advantages/advantages-item-1.png');"></div>

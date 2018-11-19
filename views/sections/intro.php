@@ -1,10 +1,10 @@
 <!-- Intro -->
 <section id="intro">
     <div class="parallax">
-        <div class="parallax__item parallax__item--1" data-speed="1"></div>
-        <div class="parallax__item parallax__item--2" data-speed="20"></div>
-        <div class="parallax__item parallax__item--3" data-speed="40"></div>
-        <div class="no-parallax"></div>
+        <div class="parallax__item parallax__item--1" data-speed="-50"></div>
+        <div class="parallax__item parallax__item--2" data-speed="15"></div>
+        <div class="parallax__item parallax__item--3" data-speed="30"></div>
+        <div class="parallax__item parallax__item--4"></div>
     </div>
     <div class="container h-100">
         <div class="row h-100 justify-content-between">

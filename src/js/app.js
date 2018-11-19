@@ -1,5 +1,7 @@
 import jquery from 'jquery';
 import Flickity from 'flickity';
+import Cocoen from 'cocoen';
+import 'cocoen/dist/css/cocoen.min.css';
 import 'flickity/dist/flickity.css';
 
 window.jQuery = window.$ = jquery;
@@ -103,30 +105,37 @@ require('paroller.js');
     }
   }
 
+  /**
+   * Decor car
+   */
+
+  var car = $('#decor-car');
+  var firstOffset = $('#intro').height() - car.height() - 60;
+
+  car.css('top', firstOffset + 'px');
+
+  $(window).on('scroll', function () {
+    if ($(this).scrollTop() > (car.offset().top / 2)) {
+      car.css('top', firstOffset + $('#advantages').height() + 200 + 'px');
+    } else {
+      car.css('top', firstOffset + 'px');
+    }
+  });
+
+  /**
+   * BeforeAfter
+   */
+  new Cocoen(document.querySelector('.beforeAfter'))
+
+  /**
+   * Parallax
+   */
+
   function castParallax() {
 
     var opThresh = 350;
     var opFactor = 750;
 
-    /*
-      $(window).scroll(function(){
-        var windowScroll = $(window).scrollTop();
-        
-        $('.keyart_layer.parallax').each(function(){
-          var $layer = $(this);
-          var yPos = -(windowScroll * $layer.data('speed') / 100);
-          $layer.css({
-            "transform" : "translate3d(0px, " + yPos + "px, 0px)"
-          });
-  
-        });
-  
-  
-        var backgroundOpacity = (windowScroll > opThresh ? (windowScroll - opThresh) / opFactor : 0);
-        $('#keyart-scrim').css('opacity', backgroundOpacity);
-      });
-  
-    */
     window.addEventListener("scroll", function (event) {
 
       var top = this.pageYOffset;
