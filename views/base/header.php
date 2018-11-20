@@ -26,6 +26,22 @@
                 c12.734,47.142,49.723,84.138,96.873,96.903l12.965-12.975c7.141-7.141,20.997-10.692,30.719-8.061l35.857,9.806
                 c9.717,2.67,20.26,12.62,23.456,22.154l1.363,4.145C381.028,333.262,377.826,346.913,370.719,353.989z" />
         </symbol>
+
+        <symbol id="prev-arrow-icon" viewBox="0 0 32.635 32.635">
+            <path d="M32.135,16.817H0.5c-0.276,0-0.5-0.224-0.5-0.5s0.224-0.5,0.5-0.5h31.635c0.276,0,0.5,0.224,0.5,0.5
+	        	S32.411,16.817,32.135,16.817z" />
+            <path d="M13.037,29.353c-0.128,0-0.256-0.049-0.354-0.146L0.146,16.669C0.053,16.575,0,16.448,0,16.315s0.053-0.26,0.146-0.354
+	        	L12.684,3.429c0.195-0.195,0.512-0.195,0.707,0s0.195,0.512,0,0.707L1.207,16.315l12.184,12.184c0.195,0.195,0.195,0.512,0,0.707
+	        	C13.293,29.304,13.165,29.353,13.037,29.353z" />
+        </symbol>
+
+        <symbol id="next-arrow-icon" viewBox="0 0 32.635 32.635">
+            <path d="M32.135,16.817H0.5c-0.276,0-0.5-0.224-0.5-0.5s0.224-0.5,0.5-0.5h31.635c0.276,0,0.5,0.224,0.5,0.5
+	        	S32.411,16.817,32.135,16.817z" />
+            <path d="M19.598,29.353c-0.128,0-0.256-0.049-0.354-0.146c-0.195-0.195-0.195-0.512,0-0.707l12.184-12.184L19.244,4.136
+	        	c-0.195-0.195-0.195-0.512,0-0.707s0.512-0.195,0.707,0l12.537,12.533c0.094,0.094,0.146,0.221,0.146,0.354
+	        	s-0.053,0.26-0.146,0.354L19.951,29.206C19.854,29.304,19.726,29.353,19.598,29.353z" />
+        </symbol>
     </svg>
 
 
@@ -36,7 +52,7 @@
                 <div class="col-12">
                     <div class="header-row">
                         <div class="header-row-item justify-content-start">
-                            <a href="/" class="logo">
+                            <a href="#intro" class="logo scroll-link">
                                 <img src="../../images/icon/logo/logo.png" alt="Carlone logo">
                             </a>
                         </div>
@@ -82,6 +98,43 @@
         </div>
     </header>
 
+    <div class="menu">
+        <div class="menu-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-lg-5 pr-sm-0">
+                        <ul class="menu-nav">
+                            <?php
+                        foreach ($nav as $key => $value) {
+                            echo '<li><a href="#' . $key . '"' . 'class="scroll-link">' . $value . '</a></li>';
+                        }
+                    ?>
+                        </ul>
+                    </div>
+                    <div class="col-sm-4 col-lg-3 p-lg-0 ml-auto mr-0 d-none d-sm-block">
+                        <h3 class="section-title text-white mb-4">
+                            Доверьтесь профессионалам
+                        </h3>
+                        <form>
+                            <div class="form-column">
+                                <div class="form-group">
+                                    <label for="user-name--footer" class="label-placeholder">Введите ваше имя</label>
+                                    <input type="text" name="name" class="form-control" id="user-name--footer">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user-phone--footer" class="label-placeholder">Номер телефона</label>
+                                    <input type="phone" name="phone" class="form-control" id="user-phone--footer">
+                                </div>
+                                <div class="form-group form-group--btn">
+                                    <button type="submit" class="btn btn-primary">Оставить заявку</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Main -->
     <main>

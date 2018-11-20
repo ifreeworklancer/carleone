@@ -1,12 +1,12 @@
 import jquery from 'jquery';
 import Flickity from 'flickity';
+import ScrollReveal from 'scrollreveal';
 import Cocoen from 'cocoen';
 import 'cocoen/dist/css/cocoen.min.css';
 import 'flickity/dist/flickity.css';
 
 window.jQuery = window.$ = jquery;
 
-require('paroller.js');
 
 (function () {
 
@@ -16,23 +16,24 @@ require('paroller.js');
   $('.burger-menu').click(function () {
     var menu = $('.menu');
     $(this).toggleClass('active');
-    if (menu.is(':visible')) {
-      menu.slideUp();
-    } else {
-      menu.slideDown();
-    }
+    menu.toggleClass('active');
   });
 
   /**
    * Fix menu
    */
-  // $(window).on('scroll', function() {
-  //   if($(this).scrollTop() > $('#intro').height()) {
-  //     $('#app-header').addClass('is-fixed');
-  //   } else {
-  //     $('#app-header').removeClass('is-fixed');
-  //   }
-  // })
+  $(window).on('scroll', function () {
+    $('.burger-menu').removeClass('active');
+    $('.menu').removeClass('active');
+    if ($(this).scrollTop() > $('#intro').height()) {
+      $('#app-header').addClass('is-fixed');
+    } else {
+      $('#app-header').removeClass('is-fixed');
+    }
+    if ($(this).scrollTop() > $('#advantages').offset().top - 150) {
+      $('.advantages-item').addClass('active');
+    }
+  })
 
   /**
    * Scroll
@@ -92,19 +93,36 @@ require('paroller.js');
         wrapAround: true,
       });
 
-      // var prevArrowReviews = document.querySelector('.slider-arrow-item--prev-reviews');
+      var prevArrowReviews = document.querySelector('.slider-arrow-item--prev-reviews');
 
-      // prevArrowReviews.addEventListener('click', function () {
-      //   flkty1.previous(true, false);
-      // });
+      prevArrowReviews.addEventListener('click', function () {
+        flkty1.previous(true, false);
+      });
 
-      // var nextArrowReviews = document.querySelector('.slider-arrow-item--next-reviews');
+      var nextArrowReviews = document.querySelector('.slider-arrow-item--next-reviews');
 
-      // nextArrowReviews.addEventListener('click', function () {
-      //   flkty1.next(true, false);
-      // });
+      nextArrowReviews.addEventListener('click', function () {
+        flkty1.next(true, false);
+      });
     }
   }
+
+  /**
+   * Tabs
+   */
+  $('.stages-tabs-img__item').eq(0).addClass('active');
+  $('.stages-card').eq(0).addClass('active');
+  $('.stages-card').on('click', function () {
+    $('.stages-card').removeClass('active');
+    $(this).addClass('active');
+    $('.stages-tabs-img__item').removeClass('active');
+    $('.stages-tabs-img__item').eq($(this).index()).addClass('active');
+  });
+
+  $('.response-header').on('click', function () {
+    $(this).parents('.questions-tabs-item').toggleClass('is-active');
+    $(this).siblings('.response-body').slideToggle();
+  });
 
   /**
    * Decor car
@@ -154,7 +172,94 @@ require('paroller.js');
 
 
   }
-
   castParallax();
+
+
+  /**
+   * Animate scroll
+   */
+  ScrollReveal().reveal('.intro-item', {
+    origin: 'left',
+    delay: 400,
+    distance: '200px',
+  });
+  ScrollReveal().reveal('.intro-order', {
+    origin: 'right',
+    delay: 400,
+    distance: '200px',
+  });
+  ScrollReveal().reveal('.pain-item', {
+    origin: 'left',
+    delay: 400,
+    distance: '200px',
+  });
+  ScrollReveal().reveal('.pain-beforeAfter', {
+    origin: 'right',
+    delay: 400,
+    distance: '200px',
+  });
+  ScrollReveal().reveal('.response-item', {
+    origin: 'bottom',
+    delay: 400,
+    distance: '200px',
+  });
+  ScrollReveal().reveal('.sale-item', {
+    origin: 'left',
+    delay: 500,
+    distance: '400px',
+  });
+  ScrollReveal().reveal('.sale-img', {
+    origin: 'right',
+    delay: 500,
+    distance: '200px',
+  });
+  ScrollReveal().reveal('.reviews-slider', {
+    origin: 'bottom',
+    delay: 500,
+    distance: '200px',
+  });
+  ScrollReveal().reveal('.stages-column', {
+    origin: 'left',
+    delay: 500,
+    distance: '200px',
+  });
+  ScrollReveal().reveal('.stages-tabs-img', {
+    origin: 'right',
+    delay: 500,
+    distance: '200px',
+  });
+  ScrollReveal().reveal('.order-item', {
+    origin: 'bottom',
+    delay: 500,
+    distance: '200px',
+  });
+
+
+  /**
+   * Map
+   */
+  var element = document.getElementById('map');
+
+  var map = L.map(element);
+
+  var logoIcon = L.icon({
+    iconUrl: '../images/icon/logo/marker-icon.png',
+
+    iconSize: [225, 85],
+    iconAnchor: [22, 94],
+    popupAnchor: [-3, -76]
+  });
+
+  L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  var target = L.latLng('50.393335', '30.615101');
+
+  map.setView(target, 14);
+
+  L.marker(target, {
+    icon: logoIcon
+  }).addTo(map);
 
 })(jQuery)

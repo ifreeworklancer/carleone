@@ -58,7 +58,7 @@ $pain = [
 
 $response = [
 	'title' => 'Нет, это не выход',
-	'text' => 'Вы тяжело работали и отложили приличную сумму. И заслуживаете за эти деньги получить качественную иномарку, <span class="text-primary font-weight-bold">дешевле на ХХХХ-ХХХХ$</span>которая престижно выглядит и долго прослужит!</span>',
+	'text' => 'Вы тяжело работали и отложили приличную сумму. И заслуживаете за эти деньги получить качественную иномарку, <span class="text-primary font-weight-bold">дешевле на ХХХХ-ХХХХ$</span> которая престижно выглядит и долго прослужит!</span>',
 ];
 
 $comparison = [
@@ -110,7 +110,7 @@ $reviews = [
 	'items' => [
 		[	
 			'image' => '../../images/content/reviews/reviews-item-1.jpg',
-			'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod tempor incididunt ut labore et dolore na aliqua. Ut enim ad , quis nostrud exercitation rem ipsum dolor sit amet, consectet eiusmod tempor incididunt sed fot.',
+			'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod tempor incididunt ut labore et dolore na aliqua. Ut enim ad , quis nostrud exercitation rem ipsum dolor sit amet, consectet eiusmod tempor incididunt sed fot.Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod tempor incididunt ut labore et dolore na aliqua. Ut enim ad.',
 			'description' => 'Александр, 32 года, бизнесмен',
 		],
 		[	
@@ -120,7 +120,7 @@ $reviews = [
 		],
 		[	
 			'image' => '../../images/content/reviews/reviews-item-1.jpg',
-			'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod tempor incididunt ut labore et dolore na aliqua. Ut enim ad , quis nostrud exercitation rem ipsum dolor sit amet, consectet eiusmod tempor incididunt sed fot.',
+			'text' => 'Lorem ipsum dolor sit amet, consectetur adipiscing sed eiusmod tempor incididunt ut labore et dolore na aliqua. Ut enim ad , quis nostrud exercitation rem.',
 			'description' => 'Александр, 32 года, бизнесмен',
 		],
 	],
@@ -195,6 +195,26 @@ $stages = [
 			'text' => 'Автомобиль и передаем его Вам. А также ключи и все необходимые документы к нему',
 		],
 	],
+	'tabs' => [
+		[
+			'image' => '../../images/content/stages/stages-tabs-item-1.png',
+		],
+		[
+			'image' => '../../images/content/stages/stages-tabs-item-2.png',
+		],
+		[
+			'image' => '../../images/content/stages/stages-tabs-item-3.png',
+		],
+		[
+			'image' => '../../images/content/stages/stages-tabs-item-4.png',
+		],
+		[
+			'image' => '../../images/content/stages/stages-tabs-item-5.png',
+		],
+		[
+			'image' => '../../images/content/stages/stages-tabs-item-6.png',
+		],
+	],
 ];
 
 $order = [
@@ -211,15 +231,15 @@ $questions = [
 		],
 		[
 			'title' => 'Как проверить что машина не бита не утопленна?',
-			'text' => '',
+			'text' => 'Всем известно, что при ввозе транспортного средства на територию Украины его необходимо «растаможить». Так сложилось, что понятие «растаможка авто» всегда вызывало негативные эмоции у людей желающих привезти автомобиль из-за границы. Во-первых - из-за заоблачных ставок налогов, во-вторых - из-за неясности и непрозрачности принципов их начисления. При этом новый Налоговый Кодекс года только усложнил ситуацию. Если первую проблему InfoCar.ua решить пока не в состоянии, то внести некоторую ясность в схемы расчета таможенных платежей можно попробовать.',
 		],
 		[
 			'title' => 'Кто поставит на учёт автомобиль?',
-			'text' => '',
+			'text' => 'Всем известно, что при ввозе транспортного средства на територию Украины его необходимо «растаможить». Так сложилось, что понятие «растаможка авто» всегда вызывало негативные эмоции у людей желающих привезти автомобиль из-за границы. Во-первых - из-за заоблачных ставок налогов, во-вторых - из-за неясности и непрозрачности принципов их начисления. При этом новый Налоговый Кодекс года только усложнил ситуацию. Если первую проблему InfoCar.ua решить пока не в состоянии, то внести некоторую ясность в схемы расчета таможенных платежей можно попробовать.',
 		],
 		[
 			'title' => 'Какие документы будут на автомобиль?',
-			'text' => '',
+			'text' => 'Всем известно, что при ввозе транспортного средства на територию Украины его необходимо «растаможить». Так сложилось, что понятие «растаможка авто» всегда вызывало негативные эмоции у людей желающих привезти автомобиль из-за границы. Во-первых - из-за заоблачных ставок налогов, во-вторых - из-за неясности и непрозрачности принципов их начисления. При этом новый Налоговый Кодекс года только усложнил ситуацию. Если первую проблему InfoCar.ua решить пока не в состоянии, то внести некоторую ясность в схемы расчета таможенных платежей можно попробовать.',
 		],
 	],
 ];
@@ -231,14 +251,17 @@ $contacts = [
 		[	
 			'name' => 'place',
 			'info' => 'г. Киев, Дніпровська наб., 26',
+			'link' => 'https://www.google.com.ua/maps/place/%D0%94%D0%BD%D0%B5%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.3932892,30.61484,19.75z/data=!4m13!1m7!3m6!1s0x40d4c5b6229edda1:0x7f8f57a6abd36eee!2z0JTQvdC10L_RgNC-0LLRgdC60LDRjyDQvdCw0LHQtdGA0LXQttC90LDRjywgMjYsINCa0LjQtdCyLCAwMjAwMA!3b1!8m2!3d50.3932735!4d30.615095!3m4!1s0x40d4c5b6229edda1:0x7f8f57a6abd36eee!8m2!3d50.3932735!4d30.615095',
 		],
 		[	
 			'name' => 'phone',
 			'info' => '+380 99 777 33 44',
+			'link' => 'tel:+380997773344',
 		],
 		[	
 			'name' => 'email',
 			'info' => 'corleone@gmail.com',
+			'link' => 'mailto:corleone@gmail.com',
 		],
 	],
 ];

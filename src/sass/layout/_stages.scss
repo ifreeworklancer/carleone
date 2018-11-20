@@ -1,0 +1,141 @@
+#stages {
+    padding: 90px 0;
+
+    .section-description {
+
+        &__title {
+
+            &::before {
+                content: '';
+                @extend %pos;
+                top: 30px;
+                left: -30px;
+                right: 160px;
+                background: $primary;
+                z-index: -5;
+            }
+        }
+    }
+}
+
+.stages-card {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: .5s;
+    cursor: pointer;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        flex-direction: row;
+    }
+
+    &.active {
+        box-shadow: 0px -10px 14px -4px rgba(0, 0, 0, 0.26);
+
+        .stages-card-description {
+
+            &::before {
+                content: '';
+                background: #fff;
+            }
+        }
+    }
+
+    &-secondary {
+        position: relative;
+        width: 100%;
+        z-index: 3;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            max-width: 220px;
+        }
+
+        .img {
+            @extend %pos;
+            @extend %img;
+            z-index: 1;
+
+            &::before {
+                content: '';
+                @extend %pos;
+                background: rgba(#000, .4);
+            }
+        }
+
+        .title {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            padding: 50px 40px;
+            z-index: 2;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+                padding: 40px 30px;
+            }
+        }
+    }
+
+    &-description {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 30px 20px;
+        padding-left: 15px;
+        z-index: 5;
+
+        &::before {
+            content: '';
+            @extend %pos;
+            left: -40px;
+            right: -50px;
+            background: #f6f6f6;
+            transform: skew(-25deg);
+            transition: .5s;
+            z-index: -5;
+        }
+
+        p {
+            margin-bottom: 0;
+            font-size: 16px;
+        }
+    }
+
+    &:hover {
+        box-shadow: 0px -10px 14px -4px rgba(0, 0, 0, 0.26);
+
+        .stages-card-description {
+
+            &::before {
+                content: '';
+                background: #fff;
+            }
+        }
+    }
+}
+
+.stages-tabs-img {
+    @extend %pos;
+    position: relative;
+    margin-bottom: 30px;
+    padding-top: 300px;
+
+    @media (min-width: map_get($grid-breakpoints, lg)) {
+        margin-bottom: 0;
+        padding-top: 0;
+        position: absolute;
+    }
+
+    &__item {
+        @extend %pos;
+        @extend %img;
+        background-size: contain;
+        opacity: 0;
+        transition: .5s;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+}

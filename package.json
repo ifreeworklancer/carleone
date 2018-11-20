@@ -18,7 +18,8 @@
     "jquery": "^3.3.1",
     "laravel-mix": "^2.1.11",
     "paroller.js": "^1.4.4",
-    "popper.js": "^1.14.3"
+    "popper.js": "^1.14.3",
+    "scrollreveal": "^4.0.5"
   },
   "devDependencies": {
     "cross-env": "^5.2.0"

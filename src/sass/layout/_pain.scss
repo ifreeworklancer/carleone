@@ -87,6 +87,11 @@
     @extend %pos;
     left: 40%;
     bottom: 20px;
+    margin-top: -80px;
+
+    @media(min-width: 1800px) {
+        margin-top: -250px;
+    }
     
     &::before {
         content: '';

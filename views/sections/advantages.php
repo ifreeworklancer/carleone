@@ -18,6 +18,8 @@
                         .
                         '<div class="advantages-item__description">' .  $item['item'] . '</div>'
                         .
+                        '<div class="decor-animate"></div>'
+                        .
                         '</div>';
                     }
                 ?>
