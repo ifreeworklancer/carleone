@@ -78,30 +78,31 @@ require('paroller.js');
   /**
    * Sliders
    */
-  if ($('.best-slider')) {
+  if ($('.reviews-slider')) {
 
-    var elem1 = document.querySelector('.best-slider');
+    var elem1 = document.querySelector('.reviews-slider');
     if (elem1) {
 
       const flkty1 = new Flickity(elem1, {
         prevNextButtons: false,
-        cellAlign: 'left',
-        contain: true,
+        cellAlign: 'center',
+        contain: false,
+        initialIndex: 1,
         draggable: true,
         wrapAround: true,
       });
 
-      var prevArrowOpportunities = document.querySelector('.slider-arrow-item--prev-best');
+      // var prevArrowReviews = document.querySelector('.slider-arrow-item--prev-reviews');
 
-      prevArrowOpportunities.addEventListener('click', function () {
-        flkty1.previous(true, false);
-      });
+      // prevArrowReviews.addEventListener('click', function () {
+      //   flkty1.previous(true, false);
+      // });
 
-      var nextArrowOpportunities = document.querySelector('.slider-arrow-item--next-best');
+      // var nextArrowReviews = document.querySelector('.slider-arrow-item--next-reviews');
 
-      nextArrowOpportunities.addEventListener('click', function () {
-        flkty1.next(true, false);
-      });
+      // nextArrowReviews.addEventListener('click', function () {
+      //   flkty1.next(true, false);
+      // });
     }
   }
 

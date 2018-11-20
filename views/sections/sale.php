@@ -22,7 +22,7 @@
                                 <label for="user-phone--sale" class="label-placeholder">Номер телефона</label>
                                 <input type="phone" name="phone" class="form-control" id="user-phone--sale">
                             </div>
-                            <div class="form-group form-groupc--btn">
+                            <div class="form-group form-group--btn">
                                 <button type="submit" class="btn btn-primary">Оставить заявку</button>
                             </div>
                         </div>
