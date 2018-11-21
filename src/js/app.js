@@ -25,7 +25,7 @@ window.jQuery = window.$ = jquery;
   $(window).on('scroll', function () {
     $('.burger-menu').removeClass('active');
     $('.menu').removeClass('active');
-    if ($(this).scrollTop() > $('#intro').height()) {
+    if ($(this).scrollTop() > 20) {
       $('#app-header').addClass('is-fixed');
     } else {
       $('#app-header').removeClass('is-fixed');

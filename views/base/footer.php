@@ -26,12 +26,12 @@
                 <form>
                     <div class="form-column">
                         <div class="form-group">
-                            <label for="user-name--footer" class="label-placeholder">Введите ваше имя</label>
-                            <input type="text" name="name" class="form-control" id="user-name--footer">
+                            <label for="user-name--appFooter" class="label-placeholder">Введите ваше имя</label>
+                            <input type="text" name="name" class="form-control" id="user-name--appFooter">
                         </div>
                         <div class="form-group">
-                            <label for="user-phone--footer" class="label-placeholder">Номер телефона</label>
-                            <input type="phone" name="phone" class="form-control" id="user-phone--footer">
+                            <label for="user-phone--appFooter" class="label-placeholder">Номер телефона</label>
+                            <input type="phone" name="appFooter" class="form-control" id="user-phone--appFooter">
                         </div>
                         <div class="form-group form-group--btn">
                             <button type="submit" class="btn btn-primary">Оставить заявку</button>
