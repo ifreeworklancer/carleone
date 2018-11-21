@@ -37,10 +37,41 @@
                                     .'</div>'
                             .'</div>'
                             .'</div>'
-                            .'<a href="#" class="btn comparison-card__btn">Хочу это авто</a>'
+                            .'<a href="#" class="btn comparison-card__btn open-modal-comparison">Хочу это авто</a>'
                         .'</div></div>';
                 }
             ?>
         </div>
     </div>
 </section>
+
+<!-- Custom Modal -->
+<div class="custom-modal custom-modal--comparison">
+    <div class="close-modal close-modal--comparison">
+        <div class="line line--left"></div>
+        <div class="line line--right"></div>
+    </div>
+    <div class="custom-modal-header">
+        <h3 class="title">
+            Оставьте заявку
+        </h3>
+    </div>
+    <div class="custom-modal-body">
+        <form>
+            <div class="form-column">
+                <div class="form-group">
+                    <label for="user-name--comparison" class="label-placeholder">Введите ваше имя</label>
+                    <input type="text" name="name" class="form-control" id="user-name--comparison">
+                </div>
+                <div class="form-group">
+                    <label for="user-phone--comparison" class="label-placeholder">Номер телефона</label>
+                    <input type="phone" name="phone" class="form-control" id="user-phone--comparison">
+                </div>
+                <div class="form-group form-group--btn">
+                    <button type="submit" class="btn btn-primary">Оставить заявку</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="modal-mask"></div>

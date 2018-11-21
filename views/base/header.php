@@ -78,7 +78,7 @@
                             </ul>
                         </div>
                         <div class="header-row-item  d-none d-sm-flex">
-                            <a href="#" class="btn btn-primary scroll-link">
+                            <a href="#comparison" class="btn btn-primary scroll-link">
                                 Подобрать авто
                             </a>
                         </div>
@@ -105,10 +105,13 @@
                     <div class="col-sm-6 col-lg-5 pr-sm-0">
                         <ul class="menu-nav">
                             <?php
-                        foreach ($nav as $key => $value) {
-                            echo '<li><a href="#' . $key . '"' . 'class="scroll-link">' . $value . '</a></li>';
-                        }
-                    ?>
+                                foreach ($header_nav_menu as $key => $value) {
+                                    echo '<li class="d-block d-lg-none"><a href="#' . $key . '"' . 'class="scroll-link">' . $value . '</a></li>';
+                                }
+                                foreach ($nav as $key => $value) {
+                                    echo '<li><a href="#' . $key . '"' . 'class="scroll-link">' . $value . '</a></li>';
+                                }
+                            ?>
                         </ul>
                     </div>
                     <div class="col-sm-4 col-lg-3 p-lg-0 ml-auto mr-0 d-none d-sm-block">

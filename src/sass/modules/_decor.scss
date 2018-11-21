@@ -61,20 +61,20 @@
     left: 50%;
     transform: translateX(-50%);
     @extend %img;
-    z-index: 80;
+    z-index: 60;
     transition: 1.3s;
 
     @media (min-width: map_get($grid-breakpoints, md)) {
         margin-left: -240px;
-        width: 250px;
-        height: 140px;
+        width: 220px;
+        height: 110px;
         display: block;
     }
 
     @media (min-width: map_get($grid-breakpoints, lg)) {
         margin-left: -280px;
-        width: 430px;
-        height: 240px;
+        width: 420px;
+        height: 210px;
     }
 
     @media (min-width: map_get($grid-breakpoints, xl)) {

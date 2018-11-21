@@ -1,8 +1,8 @@
 <!-- Saving -->
 <section id="saving">
-    <div class="container-fluid p-sm-0">
-        <div class="row">
-            <div class="col-12 p-sm-0">
+    <div class="container-fluid p-0">
+        <div class="row no-gutters">
+            <div class="col-12">
                 <div class="saving-slider">
                     <?php 
                         foreach ($saving['items'] as $item) {

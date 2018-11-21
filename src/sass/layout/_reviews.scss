@@ -1,8 +1,12 @@
 #reviews {
     margin-top: -30px;
-    padding: 100px 0 150px;
+    padding: 100px 0 70px;
     background: #fff;
     z-index: 6;
+
+    @media (min-width: map_get($grid-breakpoints, sm)) {
+        padding-bottom: 150px;
+    }
 
     .section-title {
         position: relative;

@@ -77,6 +77,24 @@ window.jQuery = window.$ = jquery;
   })
 
   /**
+   * Modal
+   */
+  $('.open-modal-comparison').on('click', function (e) {
+    e.preventDefault();
+    $('.custom-modal--comparison').addClass('active');
+    $('.modal-mask').addClass('active');
+  });
+  $('.close-modal').on('click', function () {
+    $('.custom-modal').removeClass('active');
+    $('.modal-mask').removeClass('active');
+  });
+  $('.modal-mask').on('click', function () {
+    $('.custom-modal').removeClass('active');
+    $('.modal-mask').removeClass('active');
+  });
+
+
+  /**
    * Sliders
    */
   if ($('.reviews-slider')) {

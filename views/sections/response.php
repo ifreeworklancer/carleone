@@ -10,7 +10,7 @@
                     <p class="text-white my-3">
                         <?= $response['text']; ?>
                     </p>
-                    <a href="#" class="btn btn-primary">
+                    <a href="#comparison" class="btn btn-primary scroll-link">
                         Подобрать авто
                     </a>
                 </div>

@@ -4,7 +4,8 @@
     &.in-focus {
 
         .label-placeholder {
-            bottom: 80%;
+            left: 0;
+            bottom: 90%;
             font-size: 13px;
             color: #a8b7cf;
         }
@@ -17,7 +18,7 @@
 
     .label-placeholder {
         position: absolute;
-        left: 0;
+        left: 15px;
         bottom: 0;
         color: #ccc;
         cursor: pointer;
@@ -26,8 +27,8 @@
     }
 
     .form-control {
-        padding-left: 0;
-        background: transparent;
+        padding: 10px 15px;
+        background: #202937;
         border-radius: 0;
         border: none;
         color: #fff;

@@ -15,9 +15,8 @@
         &::before {
             content: '';
             position: absolute;
-            top: 50%;
+            top: 7px;
             left: 0;
-            transform: translateY(-50%);
             width: 40px;
             height: 1px;
             background: #2a374c;
