@@ -107,6 +107,33 @@ window.jQuery = window.$ = jquery;
     }
   }
 
+  if ($('.saving-slider')) {
+
+    var elem2 = document.querySelector('.saving-slider');
+    if (elem2) {
+
+      const flkty2 = new Flickity(elem2, {
+        prevNextButtons: false,
+        cellAlign: 'left',
+        contain: false,
+        draggable: true,
+        wrapAround: true,
+      });
+
+      var prevArrowSaving = document.querySelector('.slider-arrow-item--prev-saving');
+
+      prevArrowSaving.addEventListener('click', function () {
+        flkty2.previous(true, false);
+      });
+
+      var nextArrowSaving = document.querySelector('.slider-arrow-item--next-saving');
+
+      nextArrowSaving.addEventListener('click', function () {
+        flkty2.next(true, false);
+      });
+    }
+  }
+
   /**
    * Tabs
    */

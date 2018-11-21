@@ -1,8 +1,8 @@
 <!-- Saving -->
 <section id="saving">
-    <div class="container-fluid p-0">
-        <div class="row no-gutters">
-            <div class="col-12">
+    <div class="container-fluid p-sm-0">
+        <div class="row">
+            <div class="col-12 p-sm-0">
                 <div class="saving-slider">
                     <?php 
                         foreach ($saving['items'] as $item) {
@@ -20,6 +20,18 @@
                     ?>
                 </div>
             </div>
+        </div>
+    </div>
+    <div class="slider-arrow">
+        <div class="slider-arrow-item slider-arrow-item--prev slider-arrow-item--prev-saving">
+            <svg width="25" height="20">
+                <use xlink:href="#prev-arrow-icon"></use>
+            </svg>
+        </div>
+        <div class="slider-arrow-item slider-arrow-item--next slider-arrow-item--next-saving">
+            <svg width="25" height="20">
+                <use xlink:href="#next-arrow-icon"></use>
+            </svg>
         </div>
     </div>
 </section>
