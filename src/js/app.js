@@ -57,6 +57,11 @@ window.jQuery = window.$ = jquery;
   });
 
   /**
+   * Footer secondary
+   */
+  $('.secondary-footer').css('margin-top', '-' + $('.secondary-footer').innerHeight() + 'px');
+
+  /**
    * Form
    */
 

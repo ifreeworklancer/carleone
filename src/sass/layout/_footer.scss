@@ -2,6 +2,11 @@
     padding-top: 60px;
     background: url('../images/bg/footer-bg.jpg') 50% 50% /cover no-repeat;
     overflow: hidden;
+
+    &.secondary-footer {
+        padding-top: 0;
+        background: transparent;
+    }
 }
 
 .footer-copyr {
