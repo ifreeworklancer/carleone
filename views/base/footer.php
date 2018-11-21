@@ -31,7 +31,7 @@
                         </div>
                         <div class="form-group">
                             <label for="user-phone--appFooter" class="label-placeholder">Номер телефона</label>
-                            <input type="phone" name="appFooter" class="form-control" id="user-phone--appFooter">
+                            <input type="tel" name="phone" class="form-control" id="user-phone--appFooter">
                         </div>
                         <div class="form-group form-group--btn">
                             <button type="submit" class="btn btn-primary">Оставить заявку</button>
