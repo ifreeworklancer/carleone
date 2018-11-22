@@ -42,7 +42,7 @@ window.jQuery = window.$ = jquery;
         clearTimeout(scrollTimeout);
         scrollTimeout = null;
       }
-      scrollTimeout = setInterval(stagesCardAddActiveInterval, 2000);
+      scrollTimeout = setInterval(stagesCardAddActiveInterval, 1500);
     }
   })
 
@@ -204,20 +204,13 @@ window.jQuery = window.$ = jquery;
   $('.stages-tabs-img__item').eq(0).addClass('active');
   $('.stages-card').eq(0).addClass('active');
 
-  var count = 0;
-  function stagesCardAddActiveInterval () {
-    if (count < $('.stages-card').length) {
-      count++;
-      $('.stages-card').eq(count).click();
-    }
-  };
-
   // setInterval(stagesCardAddActiveInterval, 1000);
 
   $('.stages-card').on('click', function () {
     $('.stages-card').removeClass('active');
     $(this).addClass('active');
     $('.stages-tabs-img__item').removeClass('active');
+    count =  ($(this).index());
     $('.stages-tabs-img__item').eq($(this).index()).addClass('active');
   });
 
@@ -226,12 +219,21 @@ window.jQuery = window.$ = jquery;
     $(this).siblings('.response-body').slideToggle();
   });
 
+  var count = 0;
+  function stagesCardAddActiveInterval () {
+    if (count < $('.stages-card').length) {
+      count++;
+      $('.stages-card').eq(count).click();
+    }
+  };
+
+
   /**
    * Decor car
    */
 
   var car = $('#decor-car');
-  var firstOffset = $('#intro').height() - car.height();
+  var firstOffset = $('#intro').height() - car.height() - 20;
 
   car.css('top', firstOffset + 'px');
 
