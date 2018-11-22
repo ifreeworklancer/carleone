@@ -34,6 +34,9 @@ window.jQuery = window.$ = jquery;
     if ($(this).scrollTop() > $('#advantages').offset().top - 150) {
       $('.advantages-item').addClass('active');
     }
+    if ($(this).scrollTop() > $('#response').offset().top - 250) {
+      $('#response').addClass('active');
+    }
     if ($(this).scrollTop() > $('#stages').offset().top) {
       if (scrollTimeout) {
         clearTimeout(scrollTimeout);
@@ -228,15 +231,13 @@ window.jQuery = window.$ = jquery;
    */
 
   var car = $('#decor-car');
-  var firstOffset = $('#intro').height() - car.height() - 60;
+  var firstOffset = $('#intro').height() - car.height();
 
   car.css('top', firstOffset + 'px');
 
   $(window).on('scroll', function () {
     if ($(this).scrollTop() > (car.offset().top / 2)) {
       car.css('top', firstOffset + $('#advantages').height() + 200 + 'px');
-    } else {
-      car.css('top', firstOffset + 'px');
     }
   });
 

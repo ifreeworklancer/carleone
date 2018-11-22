@@ -11,7 +11,7 @@
                         2018 Все права защищены
                     </div>
                     <div class="footer-copyr-item">
-                        Дизайн и разработка сайта компание <a href="https://impressionbureau.pro" target="_blank">Impression.Bureau</a>
+                        Дизайн и разработка сайта компании <a href="https://impressionbureau.pro" target="_blank">Impression.Bureau</a>
                     </div>
                 </div>
             </div>

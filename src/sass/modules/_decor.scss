@@ -78,7 +78,7 @@
     }
 
     @media (min-width: map_get($grid-breakpoints, xl)) {
-        margin-left: -420px;
+        margin-left: -380px;
     }
 
 }
@@ -88,6 +88,30 @@
     position: relative;
     max-height: 100%;
     overflow: hidden;
+
+    span {
+        margin-right: 70px;
+
+        &::before {
+            border: none;
+            width: 5px;
+            height: 80px;
+            background: $primary;
+            margin-left: -2px;
+        }
+
+        &::after {
+            content: 'Потяните';
+            position: absolute;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            margin-top: 20px;
+            font-size: 18px;
+            color: #fff;
+            opacity: .8;
+        }
+    }
 
     div {
 
