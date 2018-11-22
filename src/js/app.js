@@ -22,6 +22,7 @@ window.jQuery = window.$ = jquery;
   /**
    * Fix menu
    */
+  var scrollTimeout;
   $(window).on('scroll', function () {
     $('.burger-menu').removeClass('active');
     $('.menu').removeClass('active');
@@ -32,6 +33,13 @@ window.jQuery = window.$ = jquery;
     }
     if ($(this).scrollTop() > $('#advantages').offset().top - 150) {
       $('.advantages-item').addClass('active');
+    }
+    if ($(this).scrollTop() > $('#stages').offset().top) {
+      if (scrollTimeout) {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = null;
+      }
+      scrollTimeout = setInterval(stagesCardAddActiveInterval, 2000);
     }
   })
 
@@ -157,11 +165,52 @@ window.jQuery = window.$ = jquery;
     }
   }
 
+
+  if ($('.comparison-slider')) {
+
+    var elem3 = document.querySelector('.comparison-slider');
+    if (elem3) {
+
+      const flkty3 = new Flickity(elem3, {
+        prevNextButtons: false,
+        cellAlign: 'center',
+        contain: false,
+        draggable: true,
+        wrapAround: false,
+      });
+
+      var prevArrowComparison = document.querySelector('.slider-arrow-item--prev-comparison');
+
+      prevArrowComparison.addEventListener('click', function () {
+        flkty3.previous(false, false);
+      });
+
+      var nextArrowComparison = document.querySelector('.slider-arrow-item--next-comparison');
+
+      nextArrowComparison.addEventListener('click', function () {
+        flkty3.next(false, false);
+      });
+    }
+  }
+
+
   /**
    * Tabs
    */
+
   $('.stages-tabs-img__item').eq(0).addClass('active');
   $('.stages-card').eq(0).addClass('active');
+
+  var count = 0;
+  function stagesCardAddActiveInterval () {
+    if (count < $('.stages-card').length) {
+      count++;
+      $('.stages-card').eq(count).click();
+    }
+  };
+
+  // setInterval(stagesCardAddActiveInterval, 1000);
+
   $('.stages-card').on('click', function () {
     $('.stages-card').removeClass('active');
     $(this).addClass('active');
@@ -268,16 +317,16 @@ window.jQuery = window.$ = jquery;
     delay: 500,
     distance: '200px',
   });
-  ScrollReveal().reveal('.stages-column', {
+  ScrollReveal().reveal('.stages', {
     origin: 'left',
     delay: 500,
     distance: '200px',
-  });
-  ScrollReveal().reveal('.stages-tabs-img', {
-    origin: 'right',
-    delay: 500,
-    distance: '200px',
-  });
+  }, 50);
+  // ScrollReveal().reveal('.stages-tabs-img', {
+  //   origin: 'right',
+  //   delay: 500,
+  //   distance: '200px',
+  // });
   ScrollReveal().reveal('.order-item', {
     origin: 'bottom',
     delay: 500,

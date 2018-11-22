@@ -20,14 +20,14 @@ $nav = [
 ];
 
 $intro = [
-	'title' => 'Подберем авто из США под Ваш бюджет.',
-	'subtitle' => 'Берем всё на себя: от доставки и растаможки,	до постановки автомобиля на укр. номера',
+	'title' => 'Подберем авто из США под Ваш бюджет',
+	'subtitle' => 'Берем всё на себя: от от выбора качественного авто, доставки и растаможки, до постановки автомобиля на украинские номера',
 ];
 
 $advantages = [
 	'list' =>  [
 		[   
-			'item' => 'Получится <span class="text-primary font-weight-bold">дешевле на ХХХХ-ХХХХ$</span>,чем покупать в Украине.  Даже с учетом доставки и растаможки',
+			'item' => 'Получится <span class="text-primary font-weight-bold">дешевле на 30-50%</span>,чем покупать в Украине.  Даже с учетом доставки и растаможки',
 		],
 		[   
 			'item' => 'Проверяем авто в 11 этапов. Привезем Вам <span class="text-primary font-weight-bold">качественный автомобиль</span>, который не нужно будет возить на СТО каждый месяц',
@@ -43,61 +43,138 @@ $pain = [
 	'subtitle' => 'Но украинские реалии таковы, что:',
 	'list' => [
 		[   
-			'item' => 'В интернете много недобросовестных продавцов. Фото в объявлении красивые, на самом деле авто или битое, или краденое',
+			'item' => 'В интернете много недобросовестных продавцов. Фото в объявлении красивое и отличное описание - а на самом деле, данной машины не существует или машина битая с крученным пробегом в 2-4 раза',
 		],
 		[   
 			'item' => 'Приезжаете смотреть авто и а оно абсолютно не товарного вида. Хотя хозяин уверяет, что машина “как новая”',
 		],
 		[   
-			'item' => 'Цены очень завышены. По цене 1 авто в Украине, в США можно купить машину с чистой историей и на несколько лет новее',
+			'item' => 'Цены очень завышены за стоимость машины на украинском рынке - в США можно купить машину с чистой историей и на несколько лет новее',
 		],
 	],
 	'secondary_title' => 'И что остается?',
-	'secondary_subtitle' => 'Брать дешевую машину и каждый месяц отвозить её на СТО? Или еще подкопить и взять что-то нормальное?...',
+	'secondary_subtitle' => 'Переплачивать за автомобиль и каждый месяц отвозить ее на СТО?	Или еще подкопить и взять что-то нормальное?...',
 ];
 
 $response = [
 	'title' => 'Нет, это не выход',
-	'text' => 'Вы тяжело работали и отложили приличную сумму. И заслуживаете за эти деньги получить качественную иномарку, <span class="text-primary font-weight-bold">дешевле на ХХХХ-ХХХХ$</span> которая престижно выглядит и долго прослужит!</span>',
+	'text' => 'Вы тяжело работали и отложили приличную сумму. И заслуживаете за эти деньги получить качественную иномарку, которая <span class="text-primary font-weight-bold">престижно выглядит и долго прослужит!</span>',
 ];
 
 $comparison = [
     'title' => 'Сравните цены некоторые популярные модели',
 	'subtitle' => 'Которые мы уже пригнали для наших клиентов',
-	'items' => [
+	'slider_items' => [
 		[
-			'title' => 'Peugeot 508 BlueHDI 2016',
-			'image' => '../../images/content/comparison/comparison-item-1.jpg',
-			'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
-			'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
-			'priceInUA' => '14 900',
-			'priceInUSA' => '8 500',
+			'card' => [
+				[
+					'title' => 'Peugeot 508 BlueHDI 2016',
+					'image' => '../../images/content/comparison/comparison-item-1.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '14 900',
+					'priceInUSA' => '8 500',
+				],
+				[
+					'title' => 'Volkswagen Arteon 2.0TSI AT Motion Elegance 2017',
+					'image' => '../../images/content/comparison/comparison-item-2.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '52 500',
+					'priceInUSA' => '35 500',
+				],
+				[
+					'title' => 'Mitsubishi Outlander 2010',
+					'image' => '../../images/content/comparison/comparison-item-3.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '8 500',
+					'priceInUSA' => ' 6 300',
+				],
+				[
+					'title' => 'Ford Mondeo 2.0 2011',
+					'image' => '../../images/content/comparison/comparison-item-4.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '13 900',
+					'priceInUSA' => '9 200',
+				],
+			],
 		],
 		[
-			'title' => 'Volkswagen Arteon 2.0TSI AT Motion Elegance 2017',
-			'image' => '../../images/content/comparison/comparison-item-2.jpg',
-			'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
-			'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
-			'priceInUA' => '52 500',
-			'priceInUSA' => '35 500',
+			'card' => [
+				[
+					'title' => 'Peugeot 508 BlueHDI 2016',
+					'image' => '../../images/content/comparison/comparison-item-1.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '14 900',
+					'priceInUSA' => '8 500',
+				],
+				[
+					'title' => 'Volkswagen Arteon 2.0TSI AT Motion Elegance 2017',
+					'image' => '../../images/content/comparison/comparison-item-2.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '52 500',
+					'priceInUSA' => '35 500',
+				],
+				[
+					'title' => 'Mitsubishi Outlander 2010',
+					'image' => '../../images/content/comparison/comparison-item-3.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '8 500',
+					'priceInUSA' => ' 6 300',
+				],
+				[
+					'title' => 'Ford Mondeo 2.0 2011',
+					'image' => '../../images/content/comparison/comparison-item-4.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '13 900',
+					'priceInUSA' => '9 200',
+				],
+			],
 		],
 		[
-			'title' => 'Mitsubishi Outlander 2010',
-			'image' => '../../images/content/comparison/comparison-item-3.jpg',
-			'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
-			'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
-			'priceInUA' => '8 500',
-			'priceInUSA' => ' 6 300',
-		],
-		[
-			'title' => 'Ford Mondeo 2.0 2011',
-			'image' => '../../images/content/comparison/comparison-item-4.jpg',
-			'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
-			'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
-			'priceInUA' => '13 900',
-			'priceInUSA' => '9 200',
+			'card' => [
+				[
+					'title' => 'Peugeot 508 BlueHDI 2016',
+					'image' => '../../images/content/comparison/comparison-item-1.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '14 900',
+					'priceInUSA' => '8 500',
+				],
+				[
+					'title' => 'Volkswagen Arteon 2.0TSI AT Motion Elegance 2017',
+					'image' => '../../images/content/comparison/comparison-item-2.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '52 500',
+					'priceInUSA' => '35 500',
+				],
+				[
+					'title' => 'Mitsubishi Outlander 2010',
+					'image' => '../../images/content/comparison/comparison-item-3.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '8 500',
+					'priceInUSA' => ' 6 300',
+				],
+				[
+					'title' => 'Ford Mondeo 2.0 2011',
+					'image' => '../../images/content/comparison/comparison-item-4.jpg',
+					'logoInUa' => '../../images/content/comparison/comparison-logo-1.png',
+					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
+					'priceInUA' => '13 900',
+					'priceInUSA' => '9 200',
+				],
+			],
 		],
 	],
+	
 ];
 
 $sale = [
@@ -129,7 +206,7 @@ $reviews = [
 $saving = [
 	'items' => [
 		[	
-			'title' => 'Зачем переплачивать?',
+			'title' => 'Почему стоит работать с нами?',
 			'subtitle' => 'Можно не пользоваться нашими услугами и пригнать себе авто самостоятельно. Но учтите, с чем Вам придется столкнуться:',   
 			'image' => '../../images/content/saving/saving-item-1.jpg',
 			'list' => '<ul class="custom-list custom-list--light"><li>Мы работаем только на проверенных аукционах</li><li>Мы проверяем авто в 11 этапов, учитывая все нюансы: количество владельцев, историю обслуживания, степень повреждений и т.д.</li><li>Оформляя покупку, Вы можете упустить какие-то документы. Мы снимаем с Вас эту головную боль и берем оформление на себя. Вы можете быть уверены, что мы ничего не упустим</li><li>Когда машина уже тут, нужно её растаможить и отремонтировать. Это может затянуться надолго, но с нами получится в 2-3 раза быстрее и дешевле, так как мы работаем с проверенными СТО</li></ul>',
@@ -154,32 +231,32 @@ $stages = [
 	'subtitle' => 'Мы берем полностью все процессы на себя:',
 	'items' => [
 		[
-			'image' => '../../images/content/stages/stages-item-1.jpg',
+			'svg' => '<svg width="30" height="30"><use xlink:href="#search-icon"></use></svg>',
 			'title' => 'Подбираем',
 			'text' => 'Авто на проверенных аукционах. Находим машину в оптимальном состоянии и по лучшей цене',
 		],
 		[
-			'image' => '../../images/content/stages/stages-item-2.jpg',
+			'svg' => '<svg width="30" height="30"><use xlink:href="#checked-icon"></use></svg>',
 			'title' => 'Проверяем',
 			'text' => 'Автомобиль в 11 этапов. Вы будете в курсе как обслуживалось это авто, кто и как им пользовался, в каком состоянии ходовая и тд.',
 		],
 		[
-			'image' => '../../images/content/stages/stages-item-3.jpg',
+			'svg' => '<svg width="30" height="30"><use xlink:href="#edit-icon"></use></svg>',
 			'title' => 'Оформляем',
 			'text' => 'Все необходимые документы для покупки автомобиля в США',
 		],
 		[
-			'image' => '../../images/content/stages/stages-item-4.jpg',
+			'svg' => '<svg width="25" height="30"><use xlink:href="#control-icon"></use></svg>',
 			'title' => 'Контролируем',
 			'text' => 'Логистику автомобиля сначала по США, а потом обеспечиваем его безопасную доставку в Украину',
 		],
 		[
-			'image' => '../../images/content/stages/stages-item-5.jpg',
+			'svg' => '<svg width="30" height="20"><use xlink:href="#clearance-icon"></use></svg>',
 			'title' => 'Растамаживаем',
 			'text' => 'И готовим все необходимые документы для растаможки',
 		],
 		[
-			'image' => '../../images/content/stages/stages-item-6.jpg',
+			'svg' => '<svg width="40" height="30"><use xlink:href="#delivery-icon"></use></svg>',
 			'title' => 'Доставляем',
 			'text' => 'Автомобиль и передаем его Вам. А также ключи и все необходимые документы к нему',
 		],

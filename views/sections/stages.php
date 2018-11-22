@@ -21,7 +21,7 @@
                             echo '<div class="stages-card">'
                             .
                             '<div class="stages-card-secondary">'
-                            .   '<div class="img" style="background-image: url(' . $item['image'] .')"></div>'
+                            .   '<div class="icon">' . $item['svg'] . '</div>'
                             .   '<h4 class="title">' . $item['title'] . '</h4>'
                             .'</div>'
                             .'<div class="stages-card-description"><p>' . $item['text'] . '</p></div>'

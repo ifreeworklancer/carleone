@@ -13,34 +13,59 @@
                 </div>
             </div>
         </div>
-        <div class="row">
+    </div>
+    <div class="container-fluid p-sm-0">
+        <div class="comparison-slider">
             <?php 
-                foreach ($comparison['items'] as $item) {
-                    echo '<div class="col-sm-8 col-lg-6 mx-auto mx-lg-0"><div class="comparison-card">'
-                            .'<div class="comparison-card-top">'
-                                .'<div class="img" style="background-image: url(' . $item['image'] .')"></div>'
-                                .'<h4 class="title">' . $item['title'] . '</h4>'
-                            .'</div>'
-                            .'<div class="comparison-card-bottom">'
-                                .'<div class="comparison-card-bottom-item comparison-card-bottom-item--UA order-2 order-sm-1">'
-                                    .'<div class="title">Цена в Украине</div>'
-                                    .'<div class="info">'
-                                        .'<div class="info__logo" style="background-image: url(' . $item['logoInUa'] .')"></div>'
-                                        .'<div class="info-value">$<span class="price">' . $item['priceInUA'] . '</span></div>'
+                    foreach ($comparison['slider_items'] as $item) {
+                        echo '<div class="comparison-slider-item"><div class="row w-100 m-0 justify-content-center">';
+                            foreach ($item['card'] as $val) {
+                                echo '<div class="col-sm-6 col-lg-6 px-0 px-sm-3"><div class="comparison-card">'
+                                    .'<div class="comparison-card-top">'
+                                        .'<div class="img" style="background-image: url(' . $val['image'] .')"></div>'
+                                        .'<h4 class="title">' . $val['title'] . '</h4>'
                                     .'</div>'
-                                .'</div>'
-                                .'<div class="comparison-card-bottom-item comparison-card-bottom-item--USA order-1 order-sm-2">'
-                                    .'<div class="title">Цена в США</div>'
-                                    .'<div class="info">'
-                                        .'<div class="info__logo" style="background-image: url(' . $item['logoInUSA'] .')"></div>'
-                                        .'<div class="info-value">$<span class="price">' . $item['priceInUSA'] . '</span></div>'
+                                    .'<div class="comparison-card-bottom">'
+                                        .'<div class="comparison-card-bottom-item comparison-card-bottom-item--UA order-2 order-sm-1">'
+                                            .'<div class="title">Цена в Украине</div>'
+                                            .'<div class="info">'
+                                                .'<div class="info__logo" style="background-image: url(' . $val['logoInUa'] .')"></div>'
+                                                .'<div class="info-value">$<span class="price">' . $val['priceInUA'] . '</span></div>'
+                                            .'</div>'
+                                        .'</div>'
+                                        .'<div class="comparison-card-bottom-item comparison-card-bottom-item--USA order-1 order-sm-2">'
+                                            .'<div class="title">Цена в США</div>'
+                                            .'<div class="info">'
+                                                .'<div class="info__logo" style="background-image: url(' . $val['logoInUSA'] .')"></div>'
+                                                .'<div class="info-value">$<span class="price">' . $val['priceInUSA'] . '</span></div>'
+                                            .'</div>'
                                     .'</div>'
-                            .'</div>'
-                            .'</div>'
-                            .'<a href="#" class="btn comparison-card__btn open-modal-comparison">Хочу это авто</a>'
-                        .'</div></div>';
-                }
-            ?>
+                                    .'</div>'
+                                    .'<a href="#" class="btn comparison-card__btn open-modal-comparison">Хочу это авто</a>'
+                                .'</div></div>';
+                            }
+                            echo '</div></div>';
+                    }
+                ?>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="slider-arrow">
+                    <div class="slider-arrow-item slider-arrow-item--prev slider-arrow-item--prev-comparison">
+                        <svg width="25" height="20">
+                            <use xlink:href="#prev-arrow-icon"></use>
+                        </svg>
+                    </div>
+                    <div class="slider-arrow-item slider-arrow-item--next slider-arrow-item--next-comparison">
+                        <svg width="25" height="20">
+                            <use xlink:href="#next-arrow-icon"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>

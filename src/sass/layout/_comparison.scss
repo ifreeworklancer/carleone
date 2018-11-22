@@ -3,6 +3,14 @@
     background: #fff;
     z-index: 3;
 
+    .slider-arrow {
+        margin-top: 15px;
+
+        @media (min-width: map_get($grid-breakpoints, sm)) {
+            left: 60px;
+        }
+    }
+
     .section-description {
 
         &::before {
@@ -13,6 +21,36 @@
             bottom: -50px;
             background: $primary;
             z-index: -5;
+        }
+    }
+}
+
+.comparison-slider {
+    width: 100%;
+    
+    .flickity-page-dots {
+        bottom: -35px;
+
+        li {
+            width: 30px;
+            height: 4px;
+            background: $primary;
+            transform: skew(-20deg);
+            border: none;
+            border-radius: 0;
+        }
+    }
+
+
+    &-item {
+        width: 100%;
+
+        @media (min-width: map_get($grid-breakpoints, lg)) {
+            width: 80%;
+        }
+
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+            width: 65%;
         }
     }
 }
@@ -36,6 +74,7 @@
             bottom: 20px;
             padding: 15px 0;
             display: inline-block;
+            font-size: 18px;
             z-index: 4;
             transition: .5s;
 

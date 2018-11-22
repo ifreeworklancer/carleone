@@ -22,59 +22,45 @@
 .stages-card {
     position: relative;
     margin-bottom: 10px;
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
+    background: #f6f6f6;
     overflow: hidden;
     transition: .5s;
     cursor: pointer;
 
+    &.active {
+        background: #fff;
+        box-shadow: 0px -10px 14px -4px rgba(0, 0, 0, 0.26);
+    }
+
     @media (min-width: map_get($grid-breakpoints, sm)) {
+        padding-top: 0;
         flex-direction: row;
     }
 
-    &.active {
-        box-shadow: 0px -10px 14px -4px rgba(0, 0, 0, 0.26);
-
-        .stages-card-description {
-
-            &::before {
-                content: '';
-                background: #fff;
-            }
-        }
-    }
 
     &-secondary {
         position: relative;
+        padding-left: 15px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
         width: 100%;
         z-index: 3;
 
         @media (min-width: map_get($grid-breakpoints, sm)) {
+            padding-left: 0;
+            justify-content: center;
             max-width: 220px;
-        }
-
-        .img {
-            @extend %pos;
-            @extend %img;
-            z-index: 1;
-
-            &::before {
-                content: '';
-                @extend %pos;
-                background: rgba(#000, .4);
-            }
         }
 
         .title {
             position: relative;
-            text-align: center;
-            color: #fff;
-            padding: 50px 40px;
+            margin-left: 20px;
+            margin-bottom: 0;
             z-index: 2;
-
-            @media (min-width: map_get($grid-breakpoints, sm)) {
-                padding: 40px 30px;
-            }
         }
     }
 
@@ -86,16 +72,6 @@
         padding-left: 15px;
         z-index: 5;
 
-        &::before {
-            content: '';
-            @extend %pos;
-            left: -40px;
-            right: -50px;
-            background: #f6f6f6;
-            transform: skew(-25deg);
-            transition: .5s;
-            z-index: -5;
-        }
 
         p {
             margin-bottom: 0;
@@ -104,6 +80,7 @@
     }
 
     &:hover {
+        background: #fff;
         box-shadow: 0px -10px 14px -4px rgba(0, 0, 0, 0.26);
 
         .stages-card-description {
