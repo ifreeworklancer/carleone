@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-10 col-lg-7 mx-auto mx-lg-0 order-2 order-lg-1">
+            <div class="col-sm-10 col-lg-7 mx-auto mx-lg-0">
                 <div class="stages-column">
                     <?php 
                         foreach ($stages['items'] as $item) {
@@ -30,8 +30,8 @@
                     ?>
                 </div>
             </div>
-            <div class="col-sm-6 col-lg-5 mx-auto mx-lg-0 order-1 order-lg-2">
-                <div class="stages-tabs-img">
+            <div class="col-sm-6 col-lg-5 mx-auto mx-lg-0">
+                <div class="stages-tabs-img d-none d-lg-block">
                     <?php 
                         foreach ($stages['tabs'] as $item) {
                             echo '<div class="stages-tabs-img__item" style="background-image: url(' . $item['image'] .')"></div>';
