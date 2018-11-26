@@ -177,6 +177,7 @@ window.jQuery = window.$ = jquery;
       const flkty3 = new Flickity(elem3, {
         prevNextButtons: false,
         cellAlign: 'center',
+        autoPlay: 3000,
         contain: false,
         draggable: true,
         wrapAround: false,
@@ -192,6 +193,34 @@ window.jQuery = window.$ = jquery;
 
       nextArrowComparison.addEventListener('click', function () {
         flkty3.next(false, false);
+      });
+    }
+  }
+
+  
+  if ($('.teams-slider')) {
+
+    var elem4 = document.querySelector('.teams-slider');
+    if (elem4) {
+
+      const flkty4 = new Flickity(elem4, {
+        prevNextButtons: false,
+        cellAlign: 'left',
+        contain: false,
+        draggable: true,
+        wrapAround: true,
+      });
+
+      var prevArrowTeams = document.querySelector('.slider-arrow-item--prev-teams');
+
+      prevArrowTeams.addEventListener('click', function () {
+        flkty4.previous(true, false);
+      });
+
+      var nextArrowTeams = document.querySelector('.slider-arrow-item--next-teams');
+
+      nextArrowTeams.addEventListener('click', function () {
+        flkty4.next(true, false);
       });
     }
   }
