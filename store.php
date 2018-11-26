@@ -324,8 +324,13 @@ $contacts = [
 	'items' => [
 		[	
 			'name' => 'place',
-			'info' => 'г. Киев, Дніпровська наб., 26',
-			'link' => 'https://www.google.com.ua/maps/place/%D0%94%D0%BD%D0%B5%D0%BF%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BD%D0%B0%D0%B1%D0%B5%D1%80%D0%B5%D0%B6%D0%BD%D0%B0%D1%8F,+26,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.3932892,30.61484,19.75z/data=!4m13!1m7!3m6!1s0x40d4c5b6229edda1:0x7f8f57a6abd36eee!2z0JTQvdC10L_RgNC-0LLRgdC60LDRjyDQvdCw0LHQtdGA0LXQttC90LDRjywgMjYsINCa0LjQtdCyLCAwMjAwMA!3b1!8m2!3d50.3932735!4d30.615095!3m4!1s0x40d4c5b6229edda1:0x7f8f57a6abd36eee!8m2!3d50.3932735!4d30.615095',
+			'info' => 'Проспект Валерия Лобановского 54',
+			'link' => 'https://www.openstreetmap.org/directions?from=54%2C%20%D0%92%D0%B0%D0%BB%D0%B5%D1%80%D0%B8%D1%8F%20%D0%9B%D0%BE%D0%B1%D0%B0%D0%BD%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%20%D0%BF%D1%80%D0%BE%D1%81%D0%BF%D0%B5%D0%BA%D1%82%2C%20%D0%94%D0%B5%D0%BC%D0%B8%D0%B5%D0%B2%D0%BA%D0%B0%2C%20%D0%93%D0%BE%D0%BB%D0%BE%D1%81%D0%B5%D0%B5%D0%B2%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%2C%20%D0%9A%D0%B8%D0%B5%D0%B2%2C%2003039%2C%20%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0#map=19/50.41826/30.47608',
+		],
+		[	
+			'name' => 'place',
+			'info' => 'Проспект Степана Бандеры 21',
+			'link' => 'https://www.openstreetmap.org/directions?from=&to=50.48781%2C30.50986#map=19/50.48775/30.51028',
 		],
 		[	
 			'name' => 'phone',
@@ -334,8 +339,8 @@ $contacts = [
 		],
 		[	
 			'name' => 'email',
-			'info' => 'corleone@gmail.com',
-			'link' => 'mailto:corleone@gmail.com',
+			'info' => 'Carleone.usa@gmail.com',
+			'link' => 'mailto:Carleone.usa@gmail.com',
 		],
 	],
 ];

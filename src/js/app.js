@@ -180,7 +180,7 @@ window.jQuery = window.$ = jquery;
         autoPlay: 3000,
         contain: false,
         draggable: true,
-        wrapAround: false,
+        wrapAround: true,
       });
 
       var prevArrowComparison = document.querySelector('.slider-arrow-item--prev-comparison');
@@ -385,11 +385,16 @@ window.jQuery = window.$ = jquery;
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
   }).addTo(map);
 
-  var target = L.latLng('50.393335', '30.615101');
+  var target = L.latLng('50.4183', '30.47579');
+  var targetSecond = L.latLng('50.4877485', '30.5098113');
 
   map.setView(target, 14);
 
   L.marker(target, {
+    icon: logoIcon
+  }).addTo(map);
+
+  L.marker(targetSecond, {
     icon: logoIcon
   }).addTo(map);
 
