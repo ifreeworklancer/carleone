@@ -4,9 +4,9 @@ import ScrollReveal from 'scrollreveal';
 import Cocoen from 'cocoen';
 import 'cocoen/dist/css/cocoen.min.css';
 import 'flickity/dist/flickity.css';
+import IMask from 'imask';
 
 window.jQuery = window.$ = jquery;
-
 
 (function () {
 
@@ -44,7 +44,7 @@ window.jQuery = window.$ = jquery;
       }
       scrollTimeout = setInterval(stagesCardAddActiveInterval, 1500);
     }
-  })
+  });
 
   /**
    * Scroll
@@ -75,7 +75,6 @@ window.jQuery = window.$ = jquery;
   /**
    * Form
    */
-
   $('.form-control').on('focus', function () {
     $(this).parents('.form-group').addClass('in-focus');
   });
@@ -88,15 +87,14 @@ window.jQuery = window.$ = jquery;
     }
   });
 
-  $('form').on('submit', function () {
-    $('input').val("");
-  })
-
   /**
    * Modal
    */
   $('.open-modal-comparison').on('click', function (e) {
     e.preventDefault();
+    const car = $(this).data('car');
+    $('[name="car"]').val(car);
+
     $('.custom-modal--comparison').addClass('active');
     $('.modal-mask').addClass('active');
   });
@@ -107,6 +105,17 @@ window.jQuery = window.$ = jquery;
   $('.modal-mask').on('click', function () {
     $('.custom-modal').removeClass('active');
     $('.modal-mask').removeClass('active');
+  });
+
+  /**
+   * Phone mask
+   * @type {*|jQuery.fn.init|jQuery|HTMLElement}
+   */
+  const phones = $('[type="tel"]');
+  Array.from(phones).forEach(phone => {
+    new IMask(phone, {
+      mask: '+{38} (000) 000-00-00'
+    });
   });
 
 
@@ -168,36 +177,33 @@ window.jQuery = window.$ = jquery;
     }
   }
 
-
   if ($('.comparison-slider')) {
+    const elem3 = $('.comparison-slider');
+    const options = {
+      prevNextButtons: false,
+      cellAlign: 'center',
+      autoPlay: 6000,
+      contain: false,
+      draggable: true,
+      wrapAround: true,
+    };
+    if (elem3.length) {
+      new Flickity(elem3[0], options);
 
-    var elem3 = document.querySelector('.comparison-slider');
-    if (elem3) {
-
-      const flkty3 = new Flickity(elem3, {
-        prevNextButtons: false,
-        cellAlign: 'center',
-        autoPlay: 3000,
-        contain: false,
-        draggable: true,
-        wrapAround: true,
-      });
-
+      const flkty3 = new Flickity(elem3[1], options);
       var prevArrowComparison = document.querySelector('.slider-arrow-item--prev-comparison');
-
       prevArrowComparison.addEventListener('click', function () {
         flkty3.previous(false, false);
       });
 
       var nextArrowComparison = document.querySelector('.slider-arrow-item--next-comparison');
-
       nextArrowComparison.addEventListener('click', function () {
         flkty3.next(false, false);
       });
     }
   }
 
-  
+
   if ($('.teams-slider')) {
 
     var elem4 = document.querySelector('.teams-slider');
@@ -239,7 +245,7 @@ window.jQuery = window.$ = jquery;
     $('.stages-card').removeClass('active');
     $(this).addClass('active');
     $('.stages-tabs-img__item').removeClass('active');
-    count =  ($(this).index());
+    count = ($(this).index());
     $('.stages-tabs-img__item').eq($(this).index()).addClass('active');
   });
 
@@ -249,7 +255,8 @@ window.jQuery = window.$ = jquery;
   });
 
   var count = 0;
-  function stagesCardAddActiveInterval () {
+
+  function stagesCardAddActiveInterval() {
     if (count < $('.stages-card').length) {
       count++;
       $('.stages-card').eq(count).click();
@@ -303,6 +310,7 @@ window.jQuery = window.$ = jquery;
 
 
   }
+
   castParallax();
 
 

@@ -12,21 +12,7 @@
                             <?= $sale['title']?>
                         </h2>
                     </div>
-                    <form method="post" action="/send.php">
-                        <div class="form-column form-column--min">
-                            <div class="form-group">
-                                <label for="user-name--sale" class="label-placeholder">Введите ваше имя</label>
-                                <input type="text" name="name" class="form-control" id="user-name--sale">
-                            </div>
-                            <div class="form-group">
-                                <label for="user-phone--sale" class="label-placeholder">Номер телефона</label>
-                                <input type="tel" name="phone" class="form-control" id="user-phone--sale">
-                            </div>
-                            <div class="form-group form-group--btn">
-                                <button type="submit" class="btn btn-primary">Оставить заявку</button>
-                            </div>
-                        </div>
-                    </form>
+					<?php include(__DIR__ . '/../modules/form.php'); ?>
                 </div>
             </div>
             <div class="col-sm-7">

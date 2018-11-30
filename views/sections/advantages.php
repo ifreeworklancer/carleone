@@ -36,4 +36,4 @@
 
 
 <!-- Car -->
-<div id='decor-car' class="decor-car" style="background-image: url('../../images/content/advantages/advantages-item-1.png');"></div>
+<div id='decor-car' class="decor-car" style="background-image: url('../../images/content/advantages/11594_st1280_089.png');"></div>

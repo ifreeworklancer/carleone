@@ -1,8 +1,8 @@
 <?php
 
-require_once('store.php');
+require_once('../store.php');
 
-require_once('views/base/header-secondary.php');
+require_once('../views/base/header-secondary.php');
 ?>
 
 <section id="thanks-page">
@@ -19,7 +19,7 @@ require_once('views/base/header-secondary.php');
                     <div class="thanks-page-item__subtitle text-white">
                         Наш менеджер с Вами свяжется...
                     </div>
-                    <div class="thanks-page-item__img" style="background-image: url('images/content/thanks/thanks-item-1.png');"></div>
+                    <div class="thanks-page-item__img" style="background-image: url('../images/content/thanks/thanks-item-1.png');"></div>
                     <a href="/" class="btn btn-primary">
                         На главную
                     </a>
@@ -31,4 +31,4 @@ require_once('views/base/header-secondary.php');
 
 <?php
 
-require_once('views/base/footer-secondary.php');
+require_once('../views/base/footer-secondary.php');

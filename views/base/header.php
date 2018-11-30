@@ -13,6 +13,16 @@
     <link rel="stylesheet" href="fonts/font.css">
     <link rel="stylesheet" href="dist/app.css">
 
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#ffc40d">
+    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
     <!-- Facebook Pixel Code -->
     <script>
         !function(f,b,e,v,n,t,s)
@@ -237,6 +247,7 @@
                                         </svg>
                                         <?= $phone ?>
                                     </a>
+                                    <div class="small">по Украине бесплатно</div>
                                 </li>
                             </ul>
                         </div>
@@ -281,21 +292,8 @@
                         <h3 class="section-title text-white mb-4">
                             Доверьтесь профессионалам
                         </h3>
-                        <form>
-                            <div class="form-column">
-                                <div class="form-group">
-                                    <label for="user-name--footer" class="label-placeholder">Введите ваше имя</label>
-                                    <input type="text" name="name" class="form-control" id="user-name--footer">
-                                </div>
-                                <div class="form-group">
-                                    <label for="user-phone--footer" class="label-placeholder">Номер телефона</label>
-                                    <input type="phone" name="phone" class="form-control" id="user-phone--footer">
-                                </div>
-                                <div class="form-group form-group--btn">
-                                    <button type="submit" class="btn btn-primary">Оставить заявку</button>
-                                </div>
-                            </div>
-                        </form>
+
+						<?php include(__DIR__ . '/../modules/form.php'); ?>
                     </div>
                 </div>
             </div>

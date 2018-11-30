@@ -5,66 +5,59 @@
             <div class="col-sm-9 col-lg-7">
                 <div class="section-description">
                     <h2 class="section-description__title">
-                        <?= $comparison['title']?>
+						<?= $comparison['title'] ?>
                     </h2>
                     <div class="section-description__subtitle">
-                        <?= $comparison['subtitle']?>
+						<?= $comparison['subtitle'] ?>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div class="container-fluid p-sm-0">
-        <div class="comparison-slider">
-            <?php 
-                    foreach ($comparison['slider_items'] as $item) {
-                        echo '<div class="comparison-slider-item"><div class="row w-100 m-0 justify-content-center">';
-                            foreach ($item['card'] as $val) {
-                                echo '<div class="col-sm-6 col-lg-6 px-0 px-sm-3"><div class="comparison-card">'
-                                    .'<div class="comparison-card-top">'
-                                        .'<div class="img" style="background-image: url(' . $val['image'] .')"></div>'
-                                        .'<h4 class="title">' . $val['title'] . '</h4>'
-                                    .'</div>'
-                                    .'<div class="comparison-card-bottom">'
-                                        .'<div class="comparison-card-bottom-item comparison-card-bottom-item--UA order-2 order-sm-1">'
-                                            .'<div class="title">Цена в Украине</div>'
-                                            .'<div class="info">'
-                                                .'<div class="info__logo" style="background-image: url(' . $val['logoInUa'] .')"></div>'
-                                                .'<div class="info-value">$<span class="price">' . $val['priceInUA'] . '</span></div>'
-                                            .'</div>'
-                                        .'</div>'
-                                        .'<div class="comparison-card-bottom-item comparison-card-bottom-item--USA order-1 order-sm-2">'
-                                            .'<div class="title">Цена в США</div>'
-                                            .'<div class="info">'
-                                                .'<div class="info__logo" style="background-image: url(' . $val['logoInUSA'] .')"></div>'
-                                                .'<div class="info-value">$<span class="price">' . $val['priceInUSA'] . '</span></div>'
-                                            .'</div>'
-                                    .'</div>'
-                                    .'</div>'
-                                    .'<a href="#" class="btn comparison-card__btn open-modal-comparison">Хочу это авто</a>'
-                                .'</div></div>';
-                            }
-                            echo '</div></div>';
-                    }
-                ?>
-            </div>
+        <div class="comparison-slider d-md-none">
+			<?php
+			$slides = [];
+			foreach ($comparison['slider_items'] as $item) {
+				foreach ($item['card'] as $card) {
+					array_push($slides, $card);
+				}
+			}
+
+			foreach ($slides as $val) {
+				echo '<div class="comparison-slider-item">';
+				include(__DIR__ . '/../modules/slider-card.php');
+				echo '</div>';
+			}
+			?>
+        </div>
+
+        <div class="comparison-slider d-none d-md-block">
+			<?php
+			foreach ($comparison['slider_items'] as $item) {
+				echo '<div class="comparison-slider-item"><div class="row w-100 m-0 justify-content-center">';
+				foreach ($item['card'] as $val) {
+					echo '<div class="col-md-6 px-0 px-sm-3">';
+					include(__DIR__ . '/../modules/slider-card.php');
+					echo '</div>';
+				}
+				echo '</div></div>';
+			}
+			?>
         </div>
     </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <div class="slider-arrow">
-                    <div class="slider-arrow-item slider-arrow-item--prev slider-arrow-item--prev-comparison">
-                        <svg width="25" height="20">
-                            <use xlink:href="#prev-arrow-icon"></use>
-                        </svg>
-                    </div>
-                    <div class="slider-arrow-item slider-arrow-item--next slider-arrow-item--next-comparison">
-                        <svg width="25" height="20">
-                            <use xlink:href="#next-arrow-icon"></use>
-                        </svg>
-                    </div>
-                </div>
+    </div>
+    <div class="container d-none d-md-block">
+        <div class="slider-arrow">
+            <div class="slider-arrow-item slider-arrow-item--prev slider-arrow-item--prev-comparison">
+                <svg width="25" height="20">
+                    <use xlink:href="#prev-arrow-icon"></use>
+                </svg>
+            </div>
+            <div class="slider-arrow-item slider-arrow-item--next slider-arrow-item--next-comparison">
+                <svg width="25" height="20">
+                    <use xlink:href="#next-arrow-icon"></use>
+                </svg>
             </div>
         </div>
     </div>
@@ -82,15 +75,18 @@
         </h3>
     </div>
     <div class="custom-modal-body">
-        <form>
+        <form action="/send.php" method="post">
+            <input type="hidden" name="car" value="">
+            <input type="hidden" name="title" value="Выбор авто">
+            <input type="hidden" name="utm" value="<?= implode('&', $_GET); ?>">
             <div class="form-column">
                 <div class="form-group">
                     <label for="user-name--comparison" class="label-placeholder">Введите ваше имя</label>
-                    <input type="text" name="name" class="form-control" id="user-name--comparison">
+                    <input type="text" name="name" class="form-control" id="user-name--comparison" required>
                 </div>
                 <div class="form-group">
                     <label for="user-phone--comparison" class="label-placeholder">Номер телефона</label>
-                    <input type="phone" name="phone" class="form-control" id="user-phone--comparison">
+                    <input type="tel" name="phone" class="form-control" id="user-phone--comparison" required>
                 </div>
                 <div class="form-group form-group--btn">
                     <button type="submit" class="btn btn-primary">Оставить заявку</button>
