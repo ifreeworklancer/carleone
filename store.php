@@ -74,6 +74,7 @@ $comparison = [
 					'logoInUSA' => '../../images/content/comparison/comparison-logo-2.png',
 					'priceInUA' => '22 700',
 					'priceInUSA' => '16 500',
+                    'settings' => [16500,773, 98, 1250, 15, 450, 400]
 				],
 				[
 					'title' => 'BMW X5 35I',

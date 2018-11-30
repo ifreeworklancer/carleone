@@ -21,5 +21,5 @@
             </div>
         </div>
     </div>
-    <a href="#" class="btn comparison-card__btn open-modal-comparison" data-car="<?= $val['title'] ?>">Хочу это авто</a>
+    <a href="#" class="btn comparison-card__btn open-modal-comparison" data-car="<?= $val['title'] ?>" data-settings="<?= json_encode($val['settings']) ?>">Хочу это авто</a>
 </div>
