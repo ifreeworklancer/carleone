@@ -95,4 +95,5 @@
         </form>
     </div>
 </div>
+<?php include(__DIR__ . '/../modules/car-modal.php'); ?>
 <div class="modal-mask"></div>

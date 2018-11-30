@@ -90,13 +90,30 @@ window.jQuery = window.$ = jquery;
   /**
    * Modal
    */
-  $('.open-modal-comparison').on('click', function (e) {
+  $('.open-modal-car').on('click', function (e) {
     e.preventDefault();
-    const car = $(this).data('car');
-    $('[name="car"]').val(car);
+    const car = JSON.parse(JSON.stringify($(this).data('car')));
+    const $modal = $('.custom-modal--car');
 
-    $('.custom-modal--comparison').addClass('active');
+    $modal.find($('.car-modal__image')).css({
+      background: `url(${car.image}) 50% 50% / cover no-repeat`
+    });
+    $modal.find($('.car-modal__title')).text(car.title);
+    $modal.find($('.car-modal__price').text(car.priceInUSA));
+
+    $('[name="car"]').val(car.title);
+
+    car.settings.forEach((item, i) => {
+      $modal.find($(`.table tr:eq(${i}) td:eq(1)`).html('$ <strong class="text-primary">'+item+'</strong>'));
+    });
+
+    $modal.addClass('active');
     $('.modal-mask').addClass('active');
+  });
+  $('.open-send-modal').on('click', function() {
+    const car = $(this).data('title');
+    $('.custom-modal--car').removeClass('active');
+    $('.custom-modal--comparison').addClass('active');
   });
   $('.close-modal').on('click', function () {
     $('.custom-modal').removeClass('active');
