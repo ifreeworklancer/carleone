@@ -50,12 +50,12 @@
     <div class="container d-none d-md-block">
         <div class="slider-arrow">
             <div class="slider-arrow-item slider-arrow-item--prev slider-arrow-item--prev-comparison">
-                <svg width="25" height="20">
+                <svg width="35" height="30">
                     <use xlink:href="#prev-arrow-icon"></use>
                 </svg>
             </div>
             <div class="slider-arrow-item slider-arrow-item--next slider-arrow-item--next-comparison">
-                <svg width="25" height="20">
+                <svg width="35" height="30">
                     <use xlink:href="#next-arrow-icon"></use>
                 </svg>
             </div>

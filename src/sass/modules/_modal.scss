@@ -16,6 +16,78 @@
         transform: translate(-50%, -50%);
     }
 
+    &--team {
+        padding: 0;
+        display: flex;
+        max-width: 585px;
+        max-height: 90vh;
+        background: #fff;
+        transform: translate(-50%, 600%);
+
+        .img {
+            width: 30%;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+                width: 40%;
+            }
+        }
+
+        .content {
+            width: 70%;
+            padding-bottom: 20px;
+
+            @media (min-width: map_get($grid-breakpoints, sm)) {
+                width: 60%;
+                padding-bottom: 50px;
+            }
+
+            .name {
+                position: relative;
+                border-top: 1px solid #e1e1e1;
+                padding: 20px;
+                font-size: 16px;
+                font-weight: bold;
+                background: #fff;
+                z-index: 4;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: -10px;
+                    left: 35px;
+                    bottom: 0;
+                    width: 90px;
+                    background: $primary;
+                    transform: skew(-20deg);
+                    z-index: -4;
+                }
+            }
+
+            .position {
+                margin: 15px 0;
+                padding: 15px 20px;
+                font-size: 14px;
+                font-style: italic;
+                color: #6a7688;
+                background: #f1f4f7;
+
+                @media (min-width: map_get($grid-breakpoints, sm)) {
+                    font-size: 16px;
+                }
+            }
+
+            .description {
+                padding: 0 20px;
+                margin-bottom: 0;
+                font-size: 14px;
+
+                @media (min-width: map_get($grid-breakpoints, sm)) {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+
     .close-modal {
         position: absolute;
         top: 15px;

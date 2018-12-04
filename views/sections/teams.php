@@ -18,12 +18,20 @@
                 <div class="teams-slider">
                     <?php 
                         foreach ($teams['items'] as $item) {
-                            echo '<div class="teams-col"><div class="teams-item">'
+                            echo '<div class="teams-col"><div class="teams-item" data-image="'.$item['image'].'" data-name="'.$item['name'].'" data-position="'.$item['position'].'" data-description="'.$item['description'].'">'
                                 .'<div class="img" style="background-image: url(' . $item['image'] .')"></div>'
                                 .'<div class="name">'. $item['name'] .'</div>'
                             .'</div></div>';
                         }
                     ?>
+                </div>
+                <div class="custom-modal custom-modal--team">
+                    <div class="img"></div>
+                    <div class="content">
+                        <div class="name"></div>
+                        <div class="position"></div>
+                        <div class="description"></div>
+                    </div>
                 </div>
             </div>
             <div class="col-12">

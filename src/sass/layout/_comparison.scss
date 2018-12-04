@@ -5,9 +5,16 @@
 
     .slider-arrow {
         margin-top: 15px;
+        justify-content: space-between;
+        z-index: 30;
 
-        @media (min-width: map_get($grid-breakpoints, sm)) {
-            left: 60px;
+        @media (min-width: map_get($grid-breakpoints, xl)) {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            max-width: 1300px;
         }
     }
 
@@ -27,7 +34,7 @@
 
 .comparison-slider {
     width: 100%;
-    
+
     .flickity-page-dots {
         bottom: -35px;
 
@@ -46,11 +53,13 @@
         width: 100%;
 
         @media (min-width: map_get($grid-breakpoints, lg)) {
-            width: 80%;
+            width: 100%;
         }
 
         @media (min-width: map_get($grid-breakpoints, xl)) {
-            width: 65%;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 35%;
         }
     }
 }
@@ -131,7 +140,7 @@
                     &__logo {
                         width: 80px;
                     }
-                    
+
                     &-value {
 
                         .price {
@@ -175,7 +184,7 @@
         font-size: 24px;
         z-index: 7;
         transition: .5s;
-        
+
         @media (min-width: map_get($grid-breakpoints, sm)) {
             left: auto;
         }
@@ -205,7 +214,7 @@
     &:hover {
 
         .comparison-card-top {
-            
+
             .title {
                 bottom: -70px;
             }

@@ -110,6 +110,28 @@ window.jQuery = window.$ = jquery;
     $modal.addClass('active');
     $('.modal-mask').addClass('active');
   });
+
+  $('.teams-item').on('click', function (e) {
+    e.preventDefault();
+    var dataImage = $(this).data('image');
+    var dataName = $(this).data('name');
+    var dataPosition = $(this).data('position');
+    var dataDescription = $(this).data('description');
+    var $modalTeam = $('.custom-modal--team');
+
+    // console.log(team);
+
+    $modalTeam.find($('.img')).css({
+      background: `url(${dataImage}) 50% 50% / cover no-repeat`
+    });
+    $modalTeam.find($('.name')).text(dataName);
+    $modalTeam.find($('.position').text(dataPosition));
+    $modalTeam.find($('.description').text(dataDescription));
+
+    $modalTeam.addClass('active');
+    $('.modal-mask').addClass('active');
+  });
+
   $('.open-send-modal').on('click', function() {
     const car = $(this).data('title');
     $('.custom-modal--car').removeClass('active');
