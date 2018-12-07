@@ -51,7 +51,6 @@
     src="https://www.facebook.com/tr?id=754891908190205&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Facebook Pixel Code -->
-
 </head>
 
 <body>
